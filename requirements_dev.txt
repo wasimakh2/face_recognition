@@ -1,6 +1,6 @@
 pip==8.1.2
 bumpversion==0.5.3
-wheel==0.29.0
+wheel==0.38.0
 watchdog==0.8.3
 flake8
 tox==2.3.1
@@ -13,3 +13,4 @@ Click>=6.0
 dlib>=19.3.0
 numpy
 scipy
+setuptools>=65.5.1 # not directly required, pinned by Snyk to avoid a vulnerability
