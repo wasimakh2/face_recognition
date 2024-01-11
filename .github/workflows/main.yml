@@ -28,9 +28,6 @@ jobs:
       run: |
         echo File Path: ${{ github.workspace }}/log_file.txt && echo "Log File Contents:" && echo && echo "Log File Contents:" && echo && cat ${{ github.workspace }}/log_file.txt
 
-      - name: Analyze error logs
-      run: echo File Path: ${{ github.workspace }}/log_file.txt && echo "Log File Contents:" && echo && cat ${{ github.workspace }}/log_file.txt
-
       - name: Run tests
   run: tox
         cat ${{ github.workspace }}/log_file.txt
@@ -38,9 +35,6 @@ jobs:
           run: |
             cat ${{ github.workspace }}/log_file.txt
           cat ${{ github.workspace }}/log_file.txt
-    run: |
-          echo File Path: ${{ github.workspace }}/log_file.txt && echo "Log File Contents:" && echo && cat ${{ github.workspace }}/log_file.txt || echo "No detailed error logs available." && echo "Log file does not exist or is empty."
-- name: Run tests
-  run: tox
-        run: |
+  run: |
+    echo "Error handling: No detailed error logs available. Log file does not exist or is empty."
         cat ${{ github.workspace }}/log_file.txt
