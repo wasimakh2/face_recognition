@@ -33,6 +33,8 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: Install dependencies
       run: |
+        pip install -r requirements.txt
+      run: |
         pip install     - name: Check package setup
       run: |
         python setup.py check
