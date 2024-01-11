@@ -67,7 +67,6 @@ Ready to contribute? Here's how to set up `face_recognition` for local developme
 66:    To install flake8 and tox, use the following command:
 
 
-    $ flake8 --ignore=E501,W503 face_recognition tests
     $ python setup.py test
     $ tox
 
@@ -149,7 +148,6 @@ Ready to contribute? Here's how to set up `face_recognition` for local developme
 65: 
 66:    To install flake8 and tox, use the following command:
 
-    $ flake8 --ignore=E501,W503 face_recognition tests
     $ python setup.py test
     $ tox
 85:     The pull request should work for Python 2.7, 3.5, 3.6, 3.7, 3.8, and PyPy.
