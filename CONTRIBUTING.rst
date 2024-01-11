@@ -68,7 +68,7 @@ Ready to contribute? Here's how to set up `face_recognition` for local developme
 
 
     $ python setup.py test
-    $ pytest --all-versions -v tests
+    $ pytest --all -v tests
        $ pytest --all-versions -v
     $ tox
 
