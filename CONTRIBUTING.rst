@@ -281,7 +281,14 @@ Before you submit a pull request, check that it meets these guidelines:
 Tips
 ----
 
-To run a subset of tests, use the following command and options:     $ pytest --all-versions
+To run a subset of tests, use the following command and options:     $ pytest --all
+
+7. The pull request should include tests and ensure that the tests pass flake8 and pytest for the relevant files in the `tests` directory.
+
+   To install flake8 and tox, use the following commands:
+
+``` --all-versions
+ ```-versions
 
 
     pytest --all
