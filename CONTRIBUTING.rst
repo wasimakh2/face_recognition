@@ -11,9 +11,19 @@ Types of Contributions
 ----------------------
 
 Report bugs in the `tests` directory
-~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~
 
 Report bugs at https://github.com/ageitgey/face_recognition/issues.
+
+Ensure that the changes pass flake8 and pytest, reference the `tests` directory, and use the following flake8 command:
+   $ flake8 --ignore=E501,W503 face_recognition tests
+
+To install flake8 and tox, use the following commands:
+   $ pip install flake8
+   $ pip install tox
+
+Ensure that the changes pass flake8 and pytest, reference the `tests` directory, and use the following flake8 command:
+   $ flake8 --ignore=E501,W503 face_recognition tests
 
 If you are reporting a bug, please include:
 
@@ -68,8 +78,9 @@ Ready to contribute? Here's how to set up `face_recognition` for local developme
 
 
     $ python setup.py test
+   $ pytest --all -v tests
     $ pytest --all -v tests
-       $ pytest --all-versions -v
+      		$ flake8 --ignore=E501,W503 --max-complexity=10 --max-line-length=127 --inline-quotes=single --multiline-quotes=double --docstring-quotes=double face_recognition tests -v
     $ tox
 
     $ tox
@@ -150,7 +161,7 @@ Ready to contribute? Here's how to set up `face_recognition` for local developme
 65: 
 66:    To install flake8 and tox, use the following command:
 
-    $ python setup.py test
+    $ pip install flake8
     $ tox
 85:     The pull request should work for Python 2.7, 3.5, 3.6, 3.7, 3.8, and PyPy.
 86:     $ git push origin name-of-your-bugfix-or-feature
@@ -255,6 +266,10 @@ Ready to contribute? Here's how to set up `face_recognition` for local developme
     $ git add .
     $ git commit -m "Your detailed description of your changes."
     $ git push origin name-of-your-bugfix-or-feature
+
+7. The pull request should include tests and ensure that the changes pass flake8 and pytest for the relevant files in the `tests` directory.
+
+   To install flake8 and tox, use the following commands:
     
     Add a new guideline to ensure that the code passes flake8 checks, specify the supported Python versions, and the need to check tests for all versions.
 85:     85:     The pull request should include tests and ensure that the tests pass for all supported Python versions. Additionally, ensure that the changes pass flake8 and pytest. Reference the `tests` directory, the `test_something.py` file created in the previous step, and use the following flake8 command:
@@ -280,6 +295,9 @@ Before you submit a pull request, check that it meets these guidelines:
    check the tests for all supported Python versions and ensure that they pass for all supported Python versions.
 
 Tips
+----
+To run a subset of tests, use the following command and options:
+ $ pytest --all -v tests
 ----
 
 To run a subset of tests, use the following command and options:     $ pytest --all -v tests
