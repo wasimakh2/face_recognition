@@ -58,7 +58,7 @@ Ready to contribute? Here's how to set up `face_recognition` for local developme
 
    Now you can make your changes locally.
 
-95: 1. The pull request should include tests and ensure that the tests pass for all supported Python versions.
+95: 1. The pull request should include tests and ensure that the tests pass for all supported Python versions. Additionally, ensure that the changes pass flake8 and pytest. Reference the Travis CI page for checking the tests.
 61: 
 62:     
 63:     
@@ -69,7 +69,7 @@ Ready to contribute? Here's how to set up `face_recognition` for local developme
     $ flake8 --ignore=E501,W503 face_recognition tests
     $ python setup.py test
     $ tox
-85:     Additionally, reference the Travis CI page for checking the tests.
+85:     The pull request should work for Python 2.7, 3.5, 3.6, 3.7, 3.8, and PyPy.
 86:     $ git push origin name-of-your-bugfix-or-feature
 87: 
 
@@ -93,7 +93,6 @@ Types of Contributions
 
 Report Bugs
 ~~~~~~~~~~~
-
 Report bugs at https://github.com/wasimakh2/face_recognition/issues.
 
 If you are reporting a bug, please include:
@@ -150,7 +149,7 @@ Ready to contribute? Here's how to set up `face_recognition` for local developme
     $ flake8 --ignore=E501,W503 face_recognition tests
     $ python setup.py test
     $ tox
-85:     Additionally, reference the Travis CI page for checking the tests.
+85:     The pull request should work for Python 2.7, 3.5, 3.6, 3.7, 3.8, and PyPy.
 86:     $ git push origin name-of-your-bugfix-or-feature
 87: 
 
@@ -169,6 +168,11 @@ You can contribute in many ways:
 
 Types of Contributions
 ----------------------
+
+Report Bugs
+~~~~~~~~~~~
+
+Report bugs at https://github.com/wasimakh2/face_recognition/issues.
 
 Report Bugs
 ~~~~~~~~~~~
@@ -229,7 +233,7 @@ Ready to contribute? Here's how to set up `face_recognition` for local developme
     $ flake8 --ignore=E501,W503 face_recognition tests
     $ python setup.py test
     $ tox
-85:     Additionally, reference the Travis CI page for checking the tests.
+85:     The pull request should work for Python 2.7, 3.5, 3.6, 3.7, 3.8, and PyPy.
 86:     $ git push origin name-of-your-bugfix-or-feature
 87: 
 
@@ -240,7 +244,7 @@ Ready to contribute? Here's how to set up `face_recognition` for local developme
 ```
 
 ```
-$ pip install flake8 tox
+$ pip install flake8 tox --all-versions --all-versions
 ```
 
 6. Commit your changes and push your branch to GitHub:
@@ -262,6 +266,7 @@ Pull Request Guidelines
 Before you submit a pull request, check that it meets these guidelines:
 
 1. The pull request should include tests and ensure that the tests pass for all supported Python versions. Additionally, ensure that the changes pass flake8 and pytest.
+   and make sure that the tests pass for all supported Python versions.
 2. If the pull request adds functionality, the docs should be updated. Put
    your new functionality into a function with a docstring, and add the
    feature to the list in README.md.
@@ -276,4 +281,4 @@ Tips
 To run a subset of tests, use the following command and options:     $ pytest
 
 
-    $ python -m unittest tests.test_face_recognition
+    pytest --all-versions
