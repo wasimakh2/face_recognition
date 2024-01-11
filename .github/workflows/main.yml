@@ -5,32 +5,38 @@ on:
         - main
         - develop
         - master
+        - feature/*
     pull_request:
       branches:
         - main
         - master
 jobs:
   build:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [3.8, 3.9]
+        python-version: [3.8, 3.9, 3.10, 3.11]
     steps:
     - name: Checkout
       uses: actions/checkout@v2
     - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v2
+      env:
+        MATRIX_PYTHON_VERSION: ${{ matrix.python-version }}
+      uses: actions/setup-python@v2.3.2
       if: failure()
       run: |
         echo File Path: ${{ github.workspace }}/log_file.txt && echo "Log File Contents:" && echo && echo "Log File Contents:" && echo && cat ${{ github.workspace }}/log_file.txt
       continue-on-error: true
-      - name: Print detailed error logs
-        if: failure()
+      - name: Analyze error logs
+      continue-on-error: true
+      run: |
+        cat ${{ github.workspace }}/log_file.txt
+        if: failure() || needs(Setup environment)
           run: |
             cat ${{ github.workspace }}/log_file.txt
           cat ${{ github.workspace }}/log_file.txt
     run: |
-          echo File Path: ${{ github.workspace }}/log_file.txt && echo "Log File Contents:" && echo && cat ${{ github.workspace }}/log_file.txt
+          echo File Path: ${{ github.workspace }}/log_file.txt && echo "Log File Contents:" && echo && cat ${{ github.workspace }}/log_file.txt || echo "No detailed error logs available." && echo "Log file does not exist or is empty."
 - name: Run tests
   run: tox
         run: |
