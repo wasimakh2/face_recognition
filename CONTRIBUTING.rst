@@ -281,4 +281,4 @@ Tips
 To run a subset of tests, use the following command and options:     $ pytest
 
 
-    $ python -m unittest tests.test_face_recognition
+    pytest --all-versions
