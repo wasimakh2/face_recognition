@@ -63,7 +63,7 @@ Ready to contribute? Here's how to set up `face_recognition` for local developme
 95: 1. The pull request should include tests and ensure that the tests pass for all supported Python versions.
 61: 
 62:     $ flake8 --ignore=E501,W503 face_recognition tests
-63:     $ python setup.py test
+63:     $ tox -e py
 64:     $ tox
 65: 
 66:    To install flake8 and tox, use the following command:
@@ -115,7 +115,7 @@ Before you submit a pull request, check that it meets these guidelines:
 Tips
 ----
 
-To run a subset of tests, use the following command and options:     $ python -m unittest test_face_recognition
+To run a subset of tests, use the following command and options:     $ tox -e py
 
 
     $ python -m unittest tests.test_face_recognition
