@@ -44,8 +44,7 @@ RUN cd ~ && \
 COPY requirements.txt /root/face_recognition/
 COPY . /root/face_recognition
 RUN cd /root/face_recognition && \
-    RUN pip3 install -r requirements.txt && \
-    python3 setup.py install
+    RUN pip install -r /root/face_recognition/requirements.txt
 
 CMD cd /root/face_recognition/examples && \
     python3 recognize_faces_in_pictures.py
