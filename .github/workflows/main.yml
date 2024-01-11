@@ -40,7 +40,7 @@ jobs:
         python setup.py check
         python setup.py sdist bdist_wheelupgrade setuptools wheel
     - name: Install package
-      run: pip install .
+      run: pip install -e .
     - name: Install package
       run: pip install .
               run: |
