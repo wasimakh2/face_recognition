@@ -58,7 +58,7 @@ Ready to contribute? Here's how to set up `face_recognition` for local developme
 
    Now you can make your changes locally.
 
-95: 1. The pull request should include tests and ensure that the tests pass for all supported Python versions. Additionally, ensure that the changes pass flake8 and pytest. Reference the `tests` directory.
+95: 1. The pull request should include tests and ensure that the tests pass for all supported Python versions. Additionally, check the tests for all supported Python versions. Additionally, ensure that the changes pass flake8 and pytest. Reference the `tests` directory.
 61: 
 62:     
 63:     
@@ -69,6 +69,7 @@ Ready to contribute? Here's how to set up `face_recognition` for local developme
 
     $ python setup.py test
     $ pytest --all-versions
+       $ pytest --all-versions -v
     $ tox
 
     $ tox
@@ -276,7 +277,7 @@ Before you submit a pull request, check that it meets these guidelines:
    Additionally, ensure that the changes pass flake8 and tests.
 3. The pull request should work for all supported Python versions. Check
    https://github.com/wasimakh2/face_recognition/pull_requests  and make sure that the tests pass for all supported Python versions.
-   and make sure that the tests pass for all supported Python versions.
+   check the tests for all supported Python versions and ensure that they pass for all supported Python versions.
 
 Tips
 ----
