@@ -22,8 +22,7 @@ Face Recognition
 Features
 --------
 
-Find faces in pictures
-^^^^^^^^^^^^^^^^^^^^^^
+Find faces in pictures and apply digital makeup
 
 Find all the faces that appear in a picture:
 
@@ -35,13 +34,25 @@ Find all the faces that appear in a picture:
     image = face_recognition.load_image_file("your_file.jpg")
     face_locations = face_recognition.face_locations(image)
 
-Find and manipulate facial features in pictures
+Find and manipulate facial features in pictures and apply digital makeup and refer the docstring
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Get the locations and outlines of each person's eyes, nose, mouth and
 chin.
 
 |image4|
+
+
+.. code:: python
+
+    def apply_digital_makeup(image_path):
+        """
+        Apply digital makeup to the facial features in the image.
+        Args:
+            image_path (str): The file path of the image
+        Returns:
+            None
+        """
 
 .. code:: python
 
