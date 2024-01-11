@@ -19,7 +19,11 @@ jobs:
       uses: actions/checkout@v2
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v2
-        continue-on-error: false
+    - name: Print detailed error logs
+        if: failure()
+        run: |
+          cat ${{ github.workspace }}/log_file.txt
+        continue-on-error: true
       - name: Print detailed error logs
         if: failure()
         run: |
@@ -29,17 +33,21 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: Install dependencies
       run: |
+        pip install -r requirements.txt
+      run: |
         pip install     - name: Check package setup
       run: |
         python setup.py check
         python setup.py sdist bdist_wheelupgrade setuptools wheel
     - name: Install package
-      run: pip install .
+      run: pip install -e .
     - name: Install package
       run: pip install .
-        - name: Check package setup
+              run: |
+        python setup.py check
+        python setup.py sdist bdist_wheel
       run: |
         python setup.py check
         python setup.py sdist bdist_wheel
-    - name: Run tests using tox
+          run: tox
       run: tox
