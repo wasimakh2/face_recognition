@@ -67,8 +67,8 @@ Ready to contribute? Here's how to set up `face_recognition` for local developme
 66:    To install flake8 and tox, use the following command:
 
 
-    $ flake8 --ignore=E501,W503 face_recognition tests
     $ python setup.py test
+    $ pytest --all-versions
     $ tox
 
     $ tox
@@ -149,7 +149,6 @@ Ready to contribute? Here's how to set up `face_recognition` for local developme
 65: 
 66:    To install flake8 and tox, use the following command:
 
-    $ flake8 --ignore=E501,W503 face_recognition tests
     $ python setup.py test
     $ tox
 85:     The pull request should work for Python 2.7, 3.5, 3.6, 3.7, 3.8, and PyPy.
@@ -257,7 +256,8 @@ Ready to contribute? Here's how to set up `face_recognition` for local developme
     $ git push origin name-of-your-bugfix-or-feature
     
     Add a new guideline to ensure that the code passes flake8 checks, specify the supported Python versions, and the need to check tests for all versions.
-85:     85:     Additionally, reference the Travis CI page for checking the tests.
+85:     85:     The pull request should include tests and ensure that the tests pass for all supported Python versions. Additionally, ensure that the changes pass flake8 and pytest. Reference the `tests` directory, the `test_something.py` file created in the previous step, and use the following flake8 command:
+       $ flake8 --ignore=E501,W503 face_recognition tests
 86:     $ git push origin name-of-your-bugfix-or-feature
 87: 
 
@@ -268,8 +268,8 @@ Pull Request Guidelines
 
 Before you submit a pull request, check that it meets these guidelines:
 
-1. The pull request should include tests and ensure that the tests pass for all supported Python versions. Additionally, ensure that the changes pass flake8 and pytest.
-   and make sure that the tests pass for all supported Python versions. Reference the `tests` directory.
+1. The pull request should include tests and ensure that the tests pass for all supported Python versions. Additionally, ensure that the changes pass flake8 and pytest. Reference the `tests` directory, the `test_something.py` file created in the previous step, and use the following flake8 command:
+       $ flake8 --ignore=E501,W503 face_recognition tests
 2. If the pull request adds functionality, the docs should be updated. Put
    your new functionality into a function with a docstring, and add the
    feature to the list in README.md.
