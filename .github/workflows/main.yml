@@ -42,7 +42,8 @@ jobs:
         pip install     - name: Check package setup
       run: |
         python setup.py check
-        python setup.py sdist bdist_wheelupgrade setuptools wheel
+        python setup.py sdist bdist_wheel
+        upgrade setuptools wheel
     - name: Install package
       run: 
     - name: Install package
