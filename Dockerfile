@@ -26,15 +26,12 @@ RUN apt-get install -y --fix-missing \
     zip \
     && apt-get clean && rm -rf /tmp/* /var/tmp/*
 
-RUN git clone -b 'v19.16' --single-branch https://github.com/davisking/dlib.git && \
-    mkdir -p /dlib/build && \
+RUN  \
     cmake -H/dlib -B/dlib/build -DDLIB_USE_CUDA=1 -DUSE_AVX_INSTRUCTIONS=1 && \
     cmake --build /dlib/build && \
     cd /dlib && \
     python3 /dlib/setup.py install
-    git clone -b 'v19.9' --single-branch https://github.com/davisking/dlib.git dlib/ && \
-    cd  dlib/ && \
-    python3 setup.py install --yes USE_AVX_INSTRUCTIONS
+    
 
 
 # The rest of this file just runs an example script.
