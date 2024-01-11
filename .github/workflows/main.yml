@@ -43,11 +43,11 @@ jobs:
         python setup.py sdist bdist_wheel
         upgrade setuptools wheel
     - name: Install dependencies
-      - name: Install package
+      - name: Install dependencies
+        run: |
         pip install -r requirements.txt
-      run: |
-        pip install     - name: Check package setup
-      run: |
+      - name: Install package
+        run: |
         python setup.py check
         python setup.py sdist bdist_wheel
         upgrade setuptools wheel
@@ -58,6 +58,7 @@ jobs:
               run: |
         python setup.py check sdist bdist_wheel
     - name: Install package
+      - name: Run tests
       - name: Run tests
         run: tox
       run: |
