@@ -61,10 +61,15 @@ Ready to contribute? Here's how to set up `face_recognition` for local developme
 
     $ flake8 --ignore=E501,W503 face_recognition tests
     $ python setup.py test
+    $ tox
 $ tox
     $ tox
 
    To install flake8 and tox, use the following commands:
+
+```
+$ pip install flake8 tox
+```
 
 ```
 $ pip install flake8 tox
@@ -87,19 +92,19 @@ Pull Request Guidelines
 
 Before you submit a pull request, check that it meets these guidelines:
 
-1. The pull request should include tests.
+1. The pull request should include tests and ensure that the tests pass for all supported Python versions.
 2. If the pull request adds functionality, the docs should be updated. Put
    your new functionality into a function with a docstring, and add the
    feature to the list in README.md.
    Additionally, ensure that the changes pass flake8 and tests.
 3. The pull request should work for Python 2.7, 3.5, 3.6, 3.7 and 3.8, and for PyPy. Check
-   https://travis-ci.org/ageitgey/face_recognition/pull_requests
+   https://travis-ci.org/ageitgey/face_recognition/pull_requests  and make sure that the tests pass for all supported Python versions.
    and make sure that the tests pass for all supported Python versions.
 
 Tips
 ----
 
-To run a subset of tests, use the following command and options:     $ python -m unittest tests.test_face_recognition
+To run a subset of tests, use the following command and options:     $ python -m unittest test_face_recognition
 
 
     $ python -m unittest tests.test_face_recognition
