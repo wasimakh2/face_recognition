@@ -93,7 +93,6 @@ Types of Contributions
 
 Report Bugs
 ~~~~~~~~~~~
-
 Report bugs at https://github.com/wasimakh2/face_recognition/issues.
 
 If you are reporting a bug, please include:
@@ -169,6 +168,11 @@ You can contribute in many ways:
 
 Types of Contributions
 ----------------------
+
+Report Bugs
+~~~~~~~~~~~
+
+Report bugs at https://github.com/wasimakh2/face_recognition/issues.
 
 Report Bugs
 ~~~~~~~~~~~
