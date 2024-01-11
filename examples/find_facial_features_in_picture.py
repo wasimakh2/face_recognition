@@ -5,7 +5,11 @@ import face_recognition
 image = face_recognition.load_image_file("two_people.jpg")
 
 # Find all facial features in all the faces in the image
-face_landmarks_list = face_recognition.face_landmarks(image)
+try:
+    face_landmarks_list = face_recognition.face_landmarks(image)
+except Exception as e:
+    print('Error occurred:', e)
+    face_landmarks_list = []
 
 print("I found {} face(s) in this photograph.".format(len(face_landmarks_list)))
 
