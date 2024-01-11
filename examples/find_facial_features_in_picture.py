@@ -9,7 +9,6 @@ try:
     face_landmarks_list = face_recognition.face_landmarks(image)
 except Exception as e:
     print('Error occurred:', e)
-    print('Error occurred:', e)
     face_landmarks_list = []
 
 print("I found {} face(s) in this photograph.".format(len(face_landmarks_list)))

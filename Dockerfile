@@ -2,7 +2,7 @@
 
 FROM python:3.9-slim-buster
 
-RUN apt-get -y update
+RUN apt-get update -y
 RUN apt-get install -y --fix-missing \
     build-essential \
     cmake \
@@ -21,7 +21,7 @@ RUN apt-get install -y --fix-missing \
     libgtk2.0-dev \
     libjpeg-dev \
     libswscale-dev \
-    pkg-config \ \
+    pkg-config
     && apt-get clean && rm -rf /tmp/* /var/tmp/*
 
 RUN  \

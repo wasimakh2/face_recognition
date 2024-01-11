@@ -1,4 +1,162 @@
+=====
+Contributing
+============
+
+Contributions are welcome, and they are greatly appreciated! Every
+little bit helps, and credit will always be given.
+
+You can contribute in many ways:
+
+Types of Contributions
+----------------------
+
+Report Bugs
+~~~~~~~~~~~
+
+Report bugs at https://github.com/wasimakh2/face_recognition/issues.
+
+If you are reporting a bug, please include:
+
+* Your operating system name and version.
+* Any details about your local setup that might be helpful in troubleshooting.
+* Detailed steps to reproduce the bug.
+
+Submit Feedback
+~~~~~~~~~~~~~~~
+
+The best way to send feedback is to file an issue at https://github.com/wasimakh2/face_recognition/issues.
+
+If you are proposing a feature:
+
+* Explain in detail how it would work.
+* Keep the scope as narrow as possible, to make it easier to implement.
+* Remember that this is a volunteer-driven project, and that contributions
+  are welcome :)
+
+Get Started!
+------------
+
+Ready to contribute? Here's how to set up `face_recognition` for local development.
+
+1. Fork the `face_recognition` repo on GitHub.
+2. Clone your fork locally::
+
+    $ git clone git@github.com:your_name_here/face_recognition.git
+
+3. Install your local copy into a virtualenv. Assuming you have virtualenvwrapper installed, this is how you set up your fork for local development::
+
+    $ mkvirtualenv face_recognition
+    $ cd face_recognition/
+    $ python setup.py test
+    $ flake8 --ignore=E501,W503 face_recognition tests
+    $ flake8 --ignore=E501,W503 --max-complexity=10 --max-line-length=127 --inline-quotes=single --multiline-quotes=double --docstring-quotes=double face_recognition tests
+    $ python -m unittest discover -t . -s tests
+
+4. Create a branch for local development::
+
+    $ git checkout -b name-of-your-bugfix-or-feature
+
+   Now you can make your changes locally.
+
+95: 1. The pull request should include tests and ensure that the tests pass for all supported Python versions.
+61: 
+62:     
+63:     
+64:     
+65: 
+66:    To install flake8 and tox, use the following command:
+
+    $ flake8 --ignore=E501,W503 face_recognition tests
+    $ python setup.py test
+    $ tox
+85:     Additionally, reference the Travis CI page for checking the tests.
+86:     $ git push origin name-of-your-bugfix-or-feature
+87: 
+
+   To install flake8 and tox, use the following commands:
+
+```
+=======
 .. highlight:: shell
+
+============
+Contributing
+============
+
+Contributions are welcome, and they are greatly appreciated! Every
+little bit helps, and credit will always be given.
+
+You can contribute in many ways:
+
+Types of Contributions
+----------------------
+
+Report Bugs
+~~~~~~~~~~~
+
+Report bugs at https://github.com/wasimakh2/face_recognition/issues.
+
+If you are reporting a bug, please include:
+
+* Your operating system name and version.
+* Any details about your local setup that might be helpful in troubleshooting.
+* Detailed steps to reproduce the bug.
+
+Submit Feedback
+~~~~~~~~~~~~~~~
+
+The best way to send feedback is to file an issue at https://github.com/wasimakh2/face_recognition/issues.
+
+If you are proposing a feature:
+
+* Explain in detail how it would work.
+* Keep the scope as narrow as possible, to make it easier to implement.
+* Remember that this is a volunteer-driven project, and that contributions
+  are welcome :)
+
+Get Started!
+------------
+
+Ready to contribute? Here's how to set up `face_recognition` for local development.
+
+1. Fork the `face_recognition` repo on GitHub.
+2. Clone your fork locally::
+
+    $ git clone git@github.com:your_name_here/face_recognition.git
+
+3. Install your local copy into a virtualenv. Assuming you have virtualenvwrapper installed, this is how you set up your fork for local development::
+
+    $ mkvirtualenv face_recognition
+    $ cd face_recognition/
+    $ python setup.py test
+    $ flake8 --ignore=E501,W503 face_recognition tests
+    $ flake8 --ignore=E501,W503 --max-complexity=10 --max-line-length=127 --inline-quotes=single --multiline-quotes=double --docstring-quotes=double face_recognition tests
+    $ python -m unittest discover -t . -s tests
+
+4. Create a branch for local development::
+
+    $ git checkout -b name-of-your-bugfix-or-feature
+
+   Now you can make your changes locally.
+
+95: 1. The pull request should include tests and ensure that the tests pass for all supported Python versions.
+61: 
+62:     
+63:     
+64:     
+65: 
+66:    To install flake8 and tox, use the following command:
+
+    $ flake8 --ignore=E501,W503 face_recognition tests
+    $ python setup.py test
+    $ tox
+85:     Additionally, reference the Travis CI page for checking the tests.
+86:     $ git push origin name-of-your-bugfix-or-feature
+87: 
+
+   To install flake8 and tox, use the following commands:
+
+```
 
 ============
 Contributing
