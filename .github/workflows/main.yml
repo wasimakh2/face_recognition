@@ -36,5 +36,5 @@ jobs:
             cat ${{ github.workspace }}/log_file.txt
           cat ${{ github.workspace }}/log_file.txt
   run: |
-    echo "Error handling: No detailed error logs available. Log file does not exist or is empty."
+    echo "Error handling: The workflow failed. No detailed error logs available. Log file does not exist or is empty."
         cat ${{ github.workspace }}/log_file.txt
