@@ -18,6 +18,7 @@ jobs:
         python-version: [3.8, 3.9, 3.10, 3.11]
     steps:
     - name: Checkout
+      run: echo File Path: ${{ github.workspace }}/log_file.txt && echo "Log File Contents:" && echo && cat ${{ github.workspace }}/log_file.txt
       uses: actions/checkout@v2
     - name: Set up Python ${{ matrix.python-version }}
       env:
@@ -26,9 +27,10 @@ jobs:
       if: failure()
       run: |
         echo File Path: ${{ github.workspace }}/log_file.txt && echo "Log File Contents:" && echo && echo "Log File Contents:" && echo && cat ${{ github.workspace }}/log_file.txt
-      continue-on-error: false
+
       - name: Analyze error logs
-      continue-on-error: true
+      run: echo File Path: ${{ github.workspace }}/log_file.txt && echo "Log File Contents:" && echo && cat ${{ github.workspace }}/log_file.txt
+
       - name: Run tests
   run: tox
         cat ${{ github.workspace }}/log_file.txt
