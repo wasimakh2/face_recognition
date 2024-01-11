@@ -266,7 +266,8 @@ Pull Request Guidelines
 
 Before you submit a pull request, check that it meets these guidelines:
 
-1. The pull request should include tests and ensure that the tests pass for all supported Python versions. Additionally, ensure that the changes pass flake8 and pytest. And make sure that the tests pass for all supported Python versions. Reference the `tests` directory and the `test_something.py` file created in the previous step.
+1. The pull request should include tests and ensure that the tests pass for all supported Python versions. Additionally, ensure that the changes pass flake8 and pytest. Reference the `tests` directory, the `test_something.py` file created in the previous step, and use the following flake8 command:
+       $ flake8 --ignore=E501,W503 face_recognition tests
 2. If the pull request adds functionality, the docs should be updated. Put
    your new functionality into a function with a docstring, and add the
    feature to the list in README.md.
