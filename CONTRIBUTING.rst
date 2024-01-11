@@ -49,7 +49,7 @@ Ready to contribute? Here's how to set up `face_recognition` for local developme
 
     $ mkvirtualenv face_recognition
     $ cd face_recognition/
-    $ python setup.py develop
+    $ python setup.py test
 
 4. Create a branch for local development::
 
@@ -59,13 +59,18 @@ Ready to contribute? Here's how to set up `face_recognition` for local developme
 
 5. When you're done making changes, check that your changes pass flake8 and the tests, including testing other Python versions with tox::
 
-    $ flake8 face_recognition tests
-    $ python setup.py test or py.test
+    $ flake8 --ignore=E501,W503 face_recognition tests
+    $ python setup.py test
+$ tox
     $ tox
 
-   To get flake8 and tox, just pip install them into your virtualenv.
+   To install flake8 and tox, use the following commands:
 
-6. Commit your changes and push your branch to GitHub::
+```
+$ pip install flake8 tox
+```
+
+6. Commit your changes and push your branch to GitHub:
 
     $ git add .
     $ git commit -m "Your detailed description of your changes."
@@ -81,7 +86,8 @@ Before you submit a pull request, check that it meets these guidelines:
 1. The pull request should include tests.
 2. If the pull request adds functionality, the docs should be updated. Put
    your new functionality into a function with a docstring, and add the
-   feature to the list in README.rst.
+   feature to the list in README.md.
+   Additionally, ensure that the changes pass flake8 and tests.
 3. The pull request should work for Python 2.7, 3.5, 3.6, 3.7 and 3.8, and for PyPy. Check
    https://travis-ci.org/ageitgey/face_recognition/pull_requests
    and make sure that the tests pass for all supported Python versions.
