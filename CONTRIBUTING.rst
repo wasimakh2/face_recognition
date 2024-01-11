@@ -66,11 +66,11 @@ Ready to contribute? Here's how to set up `face_recognition` for local developme
 65: 
 66:    To install flake8 and tox, use the following command:
 
-    $ pip install flake8 tox --all-versions
+
     $ flake8 --ignore=E501,W503 face_recognition tests
     $ python setup.py test
     $ tox
-    $ pip install flake8 tox --all-versions
+
     $ tox
 85:     The pull request should work for all supported Python versions.
 86:     $ git push origin name-of-your-bugfix-or-feature
@@ -247,7 +247,7 @@ Ready to contribute? Here's how to set up `face_recognition` for local developme
 ```
 
 ```
-$ pip install flake8 tox --all-versions --all-versions
+ --all-versions
 ```
 
 6. Commit your changes and push your branch to GitHub:
