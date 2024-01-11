@@ -48,8 +48,8 @@ Ready to contribute? Here's how to set up `face_recognition` for local developme
     $ mkvirtualenv face_recognition
     $ cd face_recognition/
     $ tox
-    $ flake8 --ignore=E501,W503 face_recognition tests
     $ flake8 --ignore=E501,W503 --max-complexity=10 --max-line-length=127 --inline-quotes=single --multiline-quotes=double --docstring-quotes=double face_recognition tests
+    $ pytest --all-versions
     $ pytest --all-versions
 
 4. Create a branch for local development::
@@ -58,7 +58,7 @@ Ready to contribute? Here's how to set up `face_recognition` for local developme
 
    Now you can make your changes locally.
 
-95: 1. The pull request should include tests and ensure that the tests pass for all supported Python versions. Additionally, ensure that the changes pass flake8 and pytest. Reference the `tests` directory.
+95: 1. The pull request should include tests and ensure that the tests pass for all supported Python versions. Additionally, check the tests for all supported Python versions. Additionally, ensure that the changes pass flake8 and pytest. Reference the `tests` directory.
 61: 
 62:     
 63:     
@@ -69,6 +69,7 @@ Ready to contribute? Here's how to set up `face_recognition` for local developme
 
     $ python setup.py test
     $ pytest --all-versions
+       $ pytest --all-versions -v
     $ tox
 
     $ tox
@@ -276,12 +277,19 @@ Before you submit a pull request, check that it meets these guidelines:
    Additionally, ensure that the changes pass flake8 and tests.
 3. The pull request should work for all supported Python versions. Check
    https://github.com/wasimakh2/face_recognition/pull_requests  and make sure that the tests pass for all supported Python versions.
-   and make sure that the tests pass for all supported Python versions.
+   check the tests for all supported Python versions and ensure that they pass for all supported Python versions.
 
 Tips
 ----
 
-To run a subset of tests, use the following command and options:     $ pytest --all-versions
+To run a subset of tests, use the following command and options:     $ pytest --all
+
+7. The pull request should include tests and ensure that the tests pass flake8 and pytest for the relevant files in the `tests` directory.
+
+   To install flake8 and tox, use the following commands:
+
+``` --all-versions
+ ```-versions
 
 
     pytest --all
