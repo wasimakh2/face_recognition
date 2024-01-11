@@ -19,7 +19,6 @@ jobs:
       uses: actions/checkout@v2
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v2
-    - name: Print detailed error logs when run fails
         - name: Print detailed error logs when run fails
           if: failure()
           run: |
