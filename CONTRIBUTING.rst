@@ -10,7 +10,7 @@ You can contribute in many ways:
 Types of Contributions
 ----------------------
 
-Report Bugs
+Report bugs in the `tests` directory
 ~~~~~~~~~~~
 
 Report bugs at https://github.com/ageitgey/face_recognition/issues.
@@ -68,7 +68,7 @@ Ready to contribute? Here's how to set up `face_recognition` for local developme
 
 
     $ python setup.py test
-    $ pytest --all-versions
+    $ pytest --all-versions -v tests
        $ pytest --all-versions -v
     $ tox
 
@@ -282,7 +282,7 @@ Before you submit a pull request, check that it meets these guidelines:
 Tips
 ----
 
-To run a subset of tests, use the following command and options:     $ pytest --all
+To run a subset of tests, use the following command and options:     $ pytest --all -v tests
 
 7. The pull request should include tests and ensure that the tests pass flake8 and pytest for the relevant files in the `tests` directory.
 
