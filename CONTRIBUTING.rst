@@ -13,7 +13,7 @@ Types of Contributions
 Report Bugs
 ~~~~~~~~~~~
 
-Report bugs at https://github.com/wasimakh2/face_recognition/issues.
+Report bugs at https://github.com/ageitgey/face_recognition/issues.
 
 If you are reporting a bug, please include:
 
@@ -66,8 +66,10 @@ Ready to contribute? Here's how to set up `face_recognition` for local developme
 65: 
 66:    To install flake8 and tox, use the following command:
 
+    $ pip install flake8 tox --all-versions
     $ flake8 --ignore=E501,W503 face_recognition tests
     $ python setup.py test
+    $ tox
     $ tox
 85:     The pull request should work for Python 2.7, 3.5, 3.6, 3.7, 3.8, and PyPy.
 86:     $ git push origin name-of-your-bugfix-or-feature
@@ -278,7 +280,7 @@ Before you submit a pull request, check that it meets these guidelines:
 Tips
 ----
 
-To run a subset of tests, use the following command and options:     $ pytest
+To run a subset of tests, use the following command and options:     $ pytest --all-versions
 
 
     pytest --all-versions
