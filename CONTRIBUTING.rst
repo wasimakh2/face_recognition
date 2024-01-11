@@ -69,7 +69,7 @@ Ready to contribute? Here's how to set up `face_recognition` for local developme
     $ flake8 --ignore=E501,W503 face_recognition tests
     $ python setup.py test
     $ tox
-85:     Additionally, reference the Travis CI page for checking the tests.
+85:     The pull request should work for Python 2.7, 3.5, 3.6, 3.7, 3.8, and PyPy.
 86:     $ git push origin name-of-your-bugfix-or-feature
 87: 
 
@@ -149,7 +149,7 @@ Ready to contribute? Here's how to set up `face_recognition` for local developme
     $ flake8 --ignore=E501,W503 face_recognition tests
     $ python setup.py test
     $ tox
-85:     Additionally, reference the Travis CI page for checking the tests.
+85:     The pull request should work for Python 2.7, 3.5, 3.6, 3.7, 3.8, and PyPy.
 86:     $ git push origin name-of-your-bugfix-or-feature
 87: 
 
@@ -233,7 +233,7 @@ Ready to contribute? Here's how to set up `face_recognition` for local developme
     $ flake8 --ignore=E501,W503 face_recognition tests
     $ python setup.py test
     $ tox
-85:     Additionally, reference the Travis CI page for checking the tests.
+85:     The pull request should work for Python 2.7, 3.5, 3.6, 3.7, 3.8, and PyPy.
 86:     $ git push origin name-of-your-bugfix-or-feature
 87: 
 
