@@ -27,7 +27,8 @@ jobs:
       if: always()
       run: |
         - name: Install flake8 and tox
-          run: sudo apt-get install flake8 tox -y
+          run: |
+            pip install flake8 tox
         echo File Path: ${{ github.workspace }}/log_file.txt && echo "Log File Contents:" && echo && echo "Log File Contents:" && echo && cat ${{ github.workspace }}/log_file.txt
 
       - name: Run tests with Flake8 and Tox
