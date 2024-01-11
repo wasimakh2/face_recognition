@@ -148,7 +148,7 @@ files named according to who is in the picture:
 
 ![known](https://cloud.githubusercontent.com/assets/896692/23582466/8324810e-00df-11e7-82cf-41515eba704d.png)
 
-Next, you need a second folder with the files you want to identify:
+Next, you need a second folder with the files or a single image you want to compare:
 
 ![unknown](https://cloud.githubusercontent.com/assets/896692/23582465/81f422f8-00df-11e7-8b0d-75364f641f58.png)
 
