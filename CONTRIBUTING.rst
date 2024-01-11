@@ -57,13 +57,20 @@ Ready to contribute? Here's how to set up `face_recognition` for local developme
 
    Now you can make your changes locally.
 
-5. When you're done making changes, check that your changes pass flake8 and the tests, including testing other Python versions with tox::
+95: 1. The pull request should include tests and ensure that the tests pass for all supported Python versions.
+61: 
+62:     $ flake8 --ignore=E501,W503 face_recognition tests
+63:     $ python setup.py test
+64:     $ tox
+65: 
+66:    To install flake8 and tox, use the following command:
 
     $ flake8 --ignore=E501,W503 face_recognition tests
     $ python setup.py test
     $ tox
-$ tox
-    $ tox
+85:     Additionally, reference the Travis CI page for checking the tests.
+86:     $ git push origin name-of-your-bugfix-or-feature
+87: 
 
    To install flake8 and tox, use the following commands:
 
@@ -82,8 +89,9 @@ $ pip install flake8 tox
     $ git push origin name-of-your-bugfix-or-feature
     
     Add a new guideline to ensure that the code passes flake8 checks, specify the supported Python versions, and the need to check tests for all versions.
-    Additionally, reference the Travis CI page for checking the tests.
-    $ git push origin name-of-your-bugfix-or-feature
+85:     Additionally, reference the Travis CI page for checking the tests.
+86:     $ git push origin name-of-your-bugfix-or-feature
+87: 
 
 7. Submit a pull request through the GitHub website.
 
