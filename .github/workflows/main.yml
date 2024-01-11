@@ -32,5 +32,5 @@ jobs:
           echo File Path: ${{ github.workspace }}/log_file.txt && echo "Log File Contents:" && echo && cat ${{ github.workspace }}/log_file.txt
 - name: Run tests
   run: tox
-      run: |
+        run: |
         cat ${{ github.workspace }}/log_file.txt
