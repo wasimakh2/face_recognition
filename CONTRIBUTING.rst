@@ -48,8 +48,8 @@ Ready to contribute? Here's how to set up `face_recognition` for local developme
     $ mkvirtualenv face_recognition
     $ cd face_recognition/
     $ tox
-    $ flake8 --ignore=E501,W503 face_recognition tests
     $ flake8 --ignore=E501,W503 --max-complexity=10 --max-line-length=127 --inline-quotes=single --multiline-quotes=double --docstring-quotes=double face_recognition tests
+    $ pytest --all-versions
     $ pytest --all-versions
 
 4. Create a branch for local development::
