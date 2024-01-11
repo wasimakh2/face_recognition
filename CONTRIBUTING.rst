@@ -57,7 +57,7 @@ Ready to contribute? Here's how to set up `face_recognition` for local developme
 
    Now you can make your changes locally.
 
-60: 5. When you're done making changes, check that your changes pass flake8 and the tests, including testing other Python versions with tox::
+95: 1. The pull request should include tests and ensure that the tests pass for all supported Python versions.
 61: 
 62:     $ flake8 --ignore=E501,W503 face_recognition tests
 63:     $ python setup.py test
