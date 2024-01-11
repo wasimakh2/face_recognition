@@ -43,7 +43,9 @@ jobs:
       run: pip install .
     - name: Install package
       run: pip install .
-        - name: Check package setup
+              run: |
+        python setup.py check
+        python setup.py sdist bdist_wheel
       run: |
         python setup.py check
         python setup.py sdist bdist_wheel
