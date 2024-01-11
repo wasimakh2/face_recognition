@@ -25,7 +25,8 @@ jobs:
       continue-on-error: true
       - name: Print detailed error logs
         if: failure()
-        run: |
+              run: |
+        python setup.py check sdist bdist_wheel
           cat ${{ github.workspace }}/log_file.txt
         run: tox
       run: |
