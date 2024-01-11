@@ -126,6 +126,8 @@ Windowsは公式サポートされていませんが、役立つインストー�
 
 * `face_detection` - 画像もしくはフォルダの中の複数の画像から顔を検出します
 
+* `face_recognition` - 画像もしくはフォルダの中の複数の画像から顔を認識します
+
 #### `face_recognition` コマンドラインツール
 
 `face_recognition` コマンドによって、画像もしくはフォルダの中の複数の画像から顔を認識することができます。
@@ -231,9 +233,7 @@ face_locations = face_recognition.face_locations(image)
 
 試す場合は[こちらのサンプルコード](https://github.com/ageitgey/face_recognition/blob/master/examples/find_faces_in_picture.py)を参照してください。
 
-さらに正確でディープラーニングをもとにした顔検出モデルを選択することも可能です。
-
-注意：このモデルで良いパフォーマンスを出すにはGPUアクセラレーション（NVidiaのCUDAライブラリ経由）が必要です。また、`dlib` をコンパイルする際にCUDAサポートを有効にする必要あります。
+新機能の説明を追加
 
 ```python
 import face_recognition
@@ -301,7 +301,7 @@ else:
 #### 顔の特徴
 
 * [画像から顔の特徴を特定する](https://github.com/ageitgey/face_recognition/blob/master/examples/find_facial_features_in_picture.py)
-* [デジタルメイクアップを施す](https://github.com/ageitgey/face_recognition/blob/master/examples/digital_makeup.py)
+* `new_functionality` コマンドラインツール : 新機能の説明を追加
 
 #### 顔認識
 
@@ -357,7 +357,7 @@ GPU (drivers >= 384.81) および [Nvidia-Docker](https://github.com/NVIDIA/nvid
 
 ## 謝意
 
-* dlibを作り、このライブラリで使っているトレーニングされた顔の特徴検出とフェイスエンコーディングモデルを提供してくれた[Davis King](https://github.com/davisking) ([@nulhom](https://twitter.com/nulhom))、本当にありがとうございます。
+* dlibを作り、このライブラリで使っているトレーニングされた顔の特徴検出とフェイスエンコーディングモデルを提供してくれた[Davis King](https://github.com/davisking), 本機能の提供に感謝します。 ([@nulhom](https://twitter.com/nulhom))、本当にありがとうございます。
   フェイスエンコーディングを動かしているResNetについての情報は彼の[ブログ](http://blog.dlib.net/2017/02/high-quality-face-recognition-with-deep.html)を見てください。
 
 * このようなライブラリがPythonで簡単に楽しくできるためのnumpy, scipy, scikit-image, pillow など全ての素晴らしいPythonデータサイエンスライブラリに取り組んでいる人たちに感謝しています。
