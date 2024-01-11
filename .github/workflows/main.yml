@@ -25,7 +25,6 @@ jobs:
         run: |
           cat ${{ github.workspace }}/log_file.txt
         continue-on-error: true
-          cat ${{ github.workspace }}/log_file.txt
 
         if: failure()
         run: |
