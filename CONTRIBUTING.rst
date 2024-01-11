@@ -275,7 +275,7 @@ Before you submit a pull request, check that it meets these guidelines:
    feature to the list in README.md.
    Additionally, ensure that the changes pass flake8 and tests.
 3. The pull request should work for all supported Python versions. Check
-   https://travis-ci.org/ageitgey/face_recognition/pull_requests  and make sure that the tests pass for all supported Python versions.
+   https://github.com/wasimakh2/face_recognition/pull_requests  and make sure that the tests pass for all supported Python versions.
    and make sure that the tests pass for all supported Python versions.
 
 Tips
