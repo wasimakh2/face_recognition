@@ -57,7 +57,13 @@ Ready to contribute? Here's how to set up `face_recognition` for local developme
 
    Now you can make your changes locally.
 
-5. When you're done making changes, check that your changes pass flake8 and the tests, including testing other Python versions with tox::
+60: 5. When you're done making changes, check that your changes pass flake8 and the tests, including testing other Python versions with tox::
+61: 
+62:     $ flake8 --ignore=E501,W503 face_recognition tests
+63:     $ python setup.py test
+64:     $ tox
+65: 
+66:    To install flake8 and tox, use the following command:
 
     $ flake8 --ignore=E501,W503 face_recognition tests
     $ python setup.py test
