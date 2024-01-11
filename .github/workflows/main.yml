@@ -57,6 +57,7 @@ jobs:
 
               run: |
         python setup.py check sdist bdist_wheel
+    - name: Install package
       - name: Run tests
         run: tox
       run: |
