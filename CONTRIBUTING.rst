@@ -69,7 +69,7 @@ Ready to contribute? Here's how to set up `face_recognition` for local developme
 
     $ python setup.py test
     $ pytest --all -v tests
-       $ pytest --all-versions -v
+       face_recognition tests/test_something.py $ flake8 --ignore=E501,W503 --max-complexity=10 --max-line-length=127 --inline-quotes=single --multiline-quotes=double --docstring-quotes=double face_recognition tests -v
     $ tox
 
     $ tox
@@ -280,6 +280,9 @@ Before you submit a pull request, check that it meets these guidelines:
    check the tests for all supported Python versions and ensure that they pass for all supported Python versions.
 
 Tips
+----
+To run a subset of tests, use the following command and options:
+ $ pytest --all -v tests
 ----
 
 To run a subset of tests, use the following command and options:     $ pytest --all -v tests
