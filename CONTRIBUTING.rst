@@ -11,9 +11,16 @@ Types of Contributions
 ----------------------
 
 Report bugs in the `tests` directory
-~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~
 
 Report bugs at https://github.com/ageitgey/face_recognition/issues.
+
+Ensure that the changes pass flake8 and pytest, reference the `tests` directory, and use the following flake8 command:
+   $ flake8 --ignore=E501,W503 face_recognition tests
+
+To install flake8 and tox, use the following commands:
+   $ pip install flake8
+   $ pip install tox
 
 Ensure that the changes pass flake8 and pytest, reference the `tests` directory, and use the following flake8 command:
    $ flake8 --ignore=E501,W503 face_recognition tests
@@ -154,7 +161,7 @@ Ready to contribute? Here's how to set up `face_recognition` for local developme
 65: 
 66:    To install flake8 and tox, use the following command:
 
-    $ python setup.py test
+    $ pip install flake8
     $ tox
 85:     The pull request should work for Python 2.7, 3.5, 3.6, 3.7, 3.8, and PyPy.
 86:     $ git push origin name-of-your-bugfix-or-feature
