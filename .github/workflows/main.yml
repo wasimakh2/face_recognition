@@ -1,24 +1,45 @@
 name: CI
-on: push
+on:
+    push:
+      branches:
+        - main
+        - master
+    pull_request:
+      branches:
+        - main
+        - master
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     strategy:
       matrix:
-        python-version: [2.7, 3.5, 3.6, 3.7, 3.8]
+        python-version: [3.8, 3.9]
     steps:
     - name: Checkout
       uses: actions/checkout@v2
     - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v1
+      uses: actions/setup-python@v2
+        continue-on-error: false
+      - name: Print detailed error logs
+        if: failure()
+        run: |
+          cat ${{ github.workspace }}/log_file.txt
+        continue-on-error: true
       with:
         python-version: ${{ matrix.python-version }}
     - name: Install dependencies
       run: |
-        pip install setuptools wheel
-        pip install .
-        pip install tox-gh-actions
-    - name: Check package setup
-      run: python setup.py check
-    - name: Test
+        pip install     - name: Check package setup
+      run: |
+        python setup.py check
+        python setup.py sdist bdist_wheelupgrade setuptools wheel
+    - name: Install package
+      run: pip install .
+    - name: Install package
+      run: pip install .
+        - name: Check package setup
+      run: |
+        python setup.py check
+        python setup.py sdist bdist_wheel
+    - name: Run tests using tox
       run: tox
