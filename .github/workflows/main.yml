@@ -43,7 +43,7 @@ jobs:
         python setup.py sdist bdist_wheel
         upgrade setuptools wheel
     - name: Install dependencies
-      run: |
+      - name: Install package
         pip install -r requirements.txt
       run: |
         pip install     - name: Check package setup
