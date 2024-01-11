@@ -20,7 +20,11 @@ jobs:
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v2
     - name: Print detailed error logs when run fails
-        if: failure()
+        - name: Print detailed error logs when run fails
+          if: failure()
+          run: |
+            cat ${{ github.workspace }}/log_file.txt
+          continue-on-error: true
         if: failure()
         run: |
           cat ${{ github.workspace }}/log_file.txt
@@ -44,6 +48,7 @@ jobs:
         upgrade setuptools wheel
     - name: Install dependencies
       - name: Install dependencies
+        if: failure()
         run: |
         pip install -r requirements.txt
       - name: Install package
@@ -59,10 +64,11 @@ jobs:
         python setup.py check sdist bdist_wheel
     - name: Install package
       - name: Run tests
+        if: failure()
+        run: |
+          cat ${{ github.workspace }}/log_file.txt
       - name: Run tests
+        if: failure()
         run: tox
       run: |
-        python setup.py check
-        python setup.py sdist bdist_wheel
-          run: tox
-      run: tox
+        cat ${{ github.workspace }}/log_file.txt
