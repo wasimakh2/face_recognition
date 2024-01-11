@@ -26,16 +26,12 @@ jobs:
       uses: actions/setup-python@v2.3.2
       if: always()
       run: |
+        - name: Install flake8 and tox
+          run: sudo apt-get install flake8 tox -y
         echo File Path: ${{ github.workspace }}/log_file.txt && echo "Log File Contents:" && echo && echo "Log File Contents:" && echo && cat ${{ github.workspace }}/log_file.txt
 
-      - name: Run tests
-  run: tox
-        working-directory: ./src
-        cat ${{ github.workspace }}/log_file.txt
-        if: always() || needs(Setup environment)
-          run: |
-            cat ${{ github.workspace }}/log_file.txt
-          cat ${{ github.workspace }}/log_file.txt
+      - name: Run tests with Flake8 and Tox
   run: |
-    echo "Error handling: The workflow failed. No detailed error logs available. Log file does not exist or is empty."
-        cat ${{ github.workspace }}/log_file.txt
+    tox
+    flake8
+    cat ${{ github.workspace }}/log_file.txt
