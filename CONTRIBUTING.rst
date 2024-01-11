@@ -58,7 +58,7 @@ Ready to contribute? Here's how to set up `face_recognition` for local developme
 
    Now you can make your changes locally.
 
-95: 1. The pull request should include tests and ensure that the tests pass for all supported Python versions.
+95: 1. The pull request should include tests and ensure that the tests pass for all supported Python versions. Additionally, reference the Travis CI page for checking the tests.
 61: 
 62:     
 63:     
@@ -262,6 +262,7 @@ Pull Request Guidelines
 Before you submit a pull request, check that it meets these guidelines:
 
 1. The pull request should include tests and ensure that the tests pass for all supported Python versions. Additionally, ensure that the changes pass flake8 and pytest.
+   and make sure that the tests pass for all supported Python versions.
 2. If the pull request adds functionality, the docs should be updated. Put
    your new functionality into a function with a docstring, and add the
    feature to the list in README.md.
