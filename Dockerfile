@@ -1,6 +1,6 @@
 # This is a sample Dockerfile you can modify to deploy your own app based on face_recognition
 
-FROM python:3.8-slim-buster
+FROM python:3.9-slim-buster
 
 RUN apt-get -y update
 RUN apt-get install -y --fix-missing \
@@ -10,20 +10,18 @@ RUN apt-get install -y --fix-missing \
     git \
     wget \
     curl \
-    graphicsmagick \
+    # Install image processing libraries
+    libgraphicsmagick1-dev \
+    libgphoto2-dev \
     libgraphicsmagick1-dev \
     libatlas-base-dev \
+    # Install OpenCV dependencies
     libavcodec-dev \
     libavformat-dev \
     libgtk2.0-dev \
     libjpeg-dev \
-    liblapack-dev \
     libswscale-dev \
-    pkg-config \
-    python3-dev \
-    python3-numpy \
-    software-properties-common \
-    zip \
+    pkg-config \ \
     && apt-get clean && rm -rf /tmp/* /var/tmp/*
 
 RUN  \
