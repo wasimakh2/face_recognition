@@ -244,7 +244,7 @@ Ready to contribute? Here's how to set up `face_recognition` for local developme
 ```
 
 ```
-$ pip install flake8 tox
+$ pip install flake8 tox --all-versions --all-versions
 ```
 
 6. Commit your changes and push your branch to GitHub:
