@@ -284,4 +284,4 @@ Tips
 To run a subset of tests, use the following command and options:     $ pytest --all-versions
 
 
-    pytest --all-versions
+    pytest --all
